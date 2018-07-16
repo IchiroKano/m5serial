@@ -12,7 +12,10 @@ void setup() {
   M5.Lcd.setTextColor(TFT_WHITE,TFT_BLACK);  
   M5.Lcd.setTextSize(2);
   M5.Lcd.setCursor(0, 0, 4);
-  M5.Lcd.println("M5 uart start");  
+  M5.Lcd.println("M5 UART start...(^^)/~~~");  
+  M5.Lcd.setTextColor(RED);
+  M5.Lcd.setCursor(0, 200, 2);
+  M5.Lcd.println("  <Sonic> <Date> <Time>");  
 }
 
 void loop() {
@@ -25,7 +28,7 @@ void loop() {
   }
 
   if(M5.BtnA.wasPressed()) {
-    printMessage( "IP address" );
+    printMessage( "Sonic" );
   }
   if(M5.BtnB.wasPressed()) {
     printMessage( "Date" );
