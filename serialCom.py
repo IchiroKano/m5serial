@@ -53,6 +53,10 @@ def main():
             strA = raw_input("send: ")
             serCom.write( strA )
             print( "[%s] sent" % strA )
+            if( strA == "exit" ):
+                serCom.close()
+                threadRead.quit()
+                exit()
         except:
             serCom.close()
             threadRead.quit()
